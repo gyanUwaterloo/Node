@@ -1,0 +1,19 @@
+{
+    "Node":{
+        "global Object contains ?":"module, process, __filename, __dirname, require.....",
+        "Global Objects":[
+            "Common js module pattern alllows us to import files and mdules from other files",
+            "require: load external modules -external or created",
+            "exports",
+            "path module: ships with node, tools to work with path strings",
+            "path: `the file name is ${path.basename(__filename)}`",
+            "Process: can be accesed globally, environment, current thread, parent process, stdin,stdout etc...",
+            "process.argv: argument that is send to terminal"
+        ],
+        "Process: StdIn and out":[
+            "Communicate with process while it is running",
+            "stout is a writable steram",
+            
+        ]
+    }
+}

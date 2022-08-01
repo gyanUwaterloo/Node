@@ -20,6 +20,26 @@
         ],
         "Timer using Async":[
             "Settimeout, clearTimeout, setInterval, clearInterval => is available globally",
+            "Other importanat functions: clearInterval(interval); interval is handle to setInterval",
+            "interval = setInterval(printTime,1000);",
+            "process.stdout.clearLine();, process.stdout.cursorTo(0);"
+        ],
+        "Using require":[
+            "const path = require('path') => const dirUploads = path.join(__dirname,'www','files','uploads')",
+            "const util =require('util') => util.log(path.basename(__filename)) => You get a timestamo for logging Automatically",
+            "const v8 = require('v8') => util.log(v8.getHeapStistics()) => Memory status",
+            "All functions can be destructured out of the modules: => Ex. const {getHeapStatistics} = require('v8') "
+        ],
+        "Core Modules":[
+            "readLine: interface around readble nad writable streams",
+            "const readline = require('readline')",
+            "const rl = readline.createInterface({ Object for specifyong input and outpt streams}) => it is a handle to the interface objct of readline",
+            "readlineInterface({ input: process.stdin, output: process.stdout})",
+            "rl.question('enter your name?', callback function)",
+            "Callback function:  answer => { console.log('your Answer: ${answer}')}"
+        ],
+        "General flow in Async calls":[
+            "A list of objects is pased to fuction, along with a call back fuction that triggers when job is over"
         ]
     }
 }

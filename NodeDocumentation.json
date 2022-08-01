@@ -13,7 +13,13 @@
         "Process: StdIn and out":[
             "Communicate with process while it is running",
             "stout is a writable steram",
-            
+            "StdIn is an Async function and by default takes in string in a steraming fashin",
+            "Stdout is the same as console.log",
+            "Ex: process.stdin.on(data, data => { function }",
+            "process.stdout.write( >>);"
+        ],
+        "Timer using Async":[
+            "Settimeout, clearTimeout, setInterval, clearInterval => is available globally",
         ]
     }
 }

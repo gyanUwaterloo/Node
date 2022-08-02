@@ -39,7 +39,48 @@
             "Callback function:  answer => { console.log('your Answer: ${answer}')}"
         ],
         "General flow in Async calls":[
-            "A list of objects is pased to fuction, along with a call back fuction that triggers when job is over"
+            "A list of objects is pased to fuction, along with a call back fuction that triggers when job is over",
+            "module.exports{}"
+        ],
+        "Event emitter":[
+            "Pub SUB design for emitting custome events and wiring up listeners and hadlers for events",
+            "These events are raised Asyn way"
+        ],
+        "File Systems Basics":[
+            "const fs = require('fs')",
+            "Other fs.readfileSysn(file, encoding,)",
+            "fs.readfile(file, encoding, (error, text){ console.log(text)})",
+            "for Binary: No encoding Argument needed, its read in a object named buffer",
+            "fs.writeFile(file, text, err => {})",
+            "fs.mkdir(file, ,err =>{}) => Check to see if fs.existSync(filename)",
+            "fs.appendFile(file, data, err =>{})",
+            "Remove and renames file: fs.rename(filename, newfile, err =>{})",
+            "Unlink: Remove => fs.unlink(filename, err=>{})",
+            "Before removing dir: we need to dlete files in there: fs.readdirSync() => gets all filename",
+            "Loop through each file name and use fs.unlink"
+        ],
+        "Files and Streams":[
+            "ReadStream of data from terminal, nad other souces",
+           "Read data as streams from file: fs.createReadStream(filename, if text then pass encoding)",
+           "readStream.on('data', data=>{ Read chunk by chunk passed to this callback function })",
+           "readStream.once('data',data=>{ Reads the first chunk of data and stops})",
+           "readSteram.on('end', () =>{ triggers when the stream reading ends})",
+           "Less memory and buffer needed to read a file",
+            "Writable Stream: fs.createWriteStream(file, encoding)",
+            "process.stdin.pipe(writeStream) => copies from terminal to the file of the write stream",
+            "readSteram.pipe(writeStream) => copies the file from readSteram to Write Steram",
+            "Node js has child processes to communictate with external applications",
+            "Child process: Spwan and execute",
+            "const cp = require(child_process)",
+            "cp.exec('open linkedin.com/learning')",
+            "cp.exec('ls', (err, data,stderr)=>{}) can be used to execute any synchonous process",
+            "Spawn: Async process",
+            "const cp = require('child_process') => include our child process",
+            "const question = cp.spawn('command that we want to spawn',[]'all additional arguments')",
+            "ex: const questionsApp = cp.spawn('node', ['questions.js']) ",
+            "questionsApp.stdout.on('data', data=> {})"
+
         ]
+
     }
 }

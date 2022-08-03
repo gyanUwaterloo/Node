@@ -1,0 +1,34 @@
+{
+    "Design  Patterns":{
+        "Creational":{
+            "Singleton":[
+                "Ensure that only one instance of an object exists and provide a global point acees to it",
+                "2 ways to do this :",
+                "Create a Singletion class and keep track of instance of class created",
+                "In the exports return the new instance which will be stored in cache by node and reusedby others"
+            ],
+            "Prototype":[
+                "Returung a default proptotype of a particular instance Object and open it for cloning and modification ",
+                "Ex.  specify a clone method in class that returns Object.getPrototype(this)",
+                "After getting this prototype, Object.create(proto) to create a new Object out of prototype",
+                "Set default params forthis object and return back to caller of clone method",
+                "In the prototype implementing class, instantiate a new Object and pass it to any caller after setting all  prototype variables",
+                "Any Class that needs the prototype, get instance of this implemented class and then clones it to create a copy"
+            ]
+        },
+        "Structural":{
+            
+            "Factory":[
+               "A factory contains all the necessary supplies and initializations for Objecst",
+               "Ex: A factory of daiy supplies. A factory for different users etc."     
+            ],
+            "Builder":[
+                "Separate construction of complex objects from its representation",
+                "Same construction process can create multiple represntaions"
+            ]
+        },
+        "Behavioural":{
+
+        }
+    }
+}

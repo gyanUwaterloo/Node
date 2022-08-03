@@ -14,21 +14,56 @@
                 "Set default params forthis object and return back to caller of clone method",
                 "In the prototype implementing class, instantiate a new Object and pass it to any caller after setting all  prototype variables",
                 "Any Class that needs the prototype, get instance of this implemented class and then clones it to create a copy"
-            ]
+            ],
+            "Factory":[
+                "A factory contains all the necessary supplies and initializations for Objects",
+                "Ex: A factory of daily supplies. A factory for different users etc." 
+             ],
+             "Builder":[
+                 "Separate construction of complex objects from its representation",
+                 "Same construction process can create multiple represntaions",
+                 "Builder is an Object that create and maintains a copy of the Object to build, returning this on each setter",
+                "After the builder is customized, it is sent to original class to set parameters and return an instance of class in build method"    
+             ]
         },
         "Structural":{
-            
-            "Factory":[
-               "A factory contains all the necessary supplies and initializations for Objecst",
-               "Ex: A factory of daiy supplies. A factory for different users etc."     
+            "Adapter":[
+                "Building an interface that helps in implementing a particular API, using exixting and non-compliant API",
+                "The main objective is to maintain the api but change the function in changed environment"
             ],
-            "Builder":[
-                "Separate construction of complex objects from its representation",
-                "Same construction process can create multiple represntaions"
+            "Proxy Pattern":[
+                "An object which is expensive, is never exposed directly to be accesed by user",
+                "A middle man can be used to provide acces to it : ex:  it can be used to cache data, security or log acces ..",
+                "Ex: Controlled access to fs"
+            ],
+            "Composite Pattern":[
+                " composite pattern is a partitioning design pattern. ",
+                "The composite pattern describes a group of objects that are treated the same way as a single instance of the same type of object.",
+                "The intent of a composite is to 'compose' objects into tree structures to represent part-whole hierarchies.",
+                "mplementing the composite pattern lets clients treat individual objects and compositions uniformly.",
+                    
+            ],
+            "Decorator pattern":[
+
             ]
+           
         },
         "Behavioural":{
+            "COR: Chain of Responsibility":[
 
+            ],
+            "Command Pattern":[
+
+            ],
+            "Iterator":[
+
+            ],
+            "Observer":[
+
+            ],
+            "Strategy Pattern":[
+
+            ]
         }
     }
 }

@@ -80,6 +80,52 @@
             "ex: const questionsApp = cp.spawn('node', ['questions.js']) ",
             "questionsApp.stdout.on('data', data=> {})"
 
+        ],
+        "Promise":[
+            "A promise is an object that can be used to represent an eventual completion of an async operation",
+            ".then methd takes functions that can be executed after succesful promise execution",
+            "We can add further chains using .then to the excution that will be executed sequentially",
+            "these then methods can be used to pass on data that can be used by next then function",
+            "An error can be thrown anytime: like throw new Error('broken') => handle it after then using ",
+            ".catch((error)=>{error handling code})",
+            "We can also invoke the rejects method => on condition rejects(new Error(Error message))"
+        ],
+        "Callbacks":[
+            "Errors in call back must pe passd as first argument",
+             "The fuction passed as second argument is callback used to executed on completion of function"   ,
+            "Converting callbacks into promises: let { promisify } = require('util') ",
+            "Using promisify to convert callbacks into Promise saves us from callback hell or pyramid of doom => antipattern",
+            "var { promisify} = require('util') ; var writefile = promisify(fs.writefile)",
+            "var unlink = promisify(fs.unlink); ",
+            "var delay = (seconds) => new Promise((resolves)=>{ setTimeout(resolves, seconds*1000)})",
+            "Now when we have to write a sequential process with call backs using above code",
+            "We do: const doStuffSeq = ()=> Promise.resolve().then(fn.).then().....catch()"
+        ],
+        "Sequential Access with Asnc/Await":[
+            "Use async: It allows us to write code line by line , but execute it in async",
+            "const dostuff = async() => { //Here we can tell certain lines to await for result before getting executed}",
+            "{ await delay(2) ....}",
+            "We can also handle errors for certain code segments with try catch block",
+            "At last we return Promise.resolve()",
+            "We can also call promises directly ex: const readdir= promisify(fs.readdir);",
+            "readdir('dir').then((files) =>{})...chain it as such",
+            "We can also chain in async fuction",
+            "async function start(){ var files = await readdir('dir')}"
+        ],
+        "Parallel Execution":[
+            "Promise.all([]).then() => takes in a array of promises and executes them in parallel ",
+            "Promise.race() => resolves the fast process before resolving"
+        ],
+        "Concurrent Execution: Combinig Seq and Parallel":[
+            "We can have a list of sync as well as async tasks  in an array",
+            "for this we create a PromiseQueue class : constructor(promises=[], concurrentCount=1)",
+            "We have 2 methods => get runAnother() and run()",
+            "We pass them to an PromiseQueue(taskArray, no. of promises to be executed together)",
+            "Ex. const delayQueue = new PromiseQueue(taskArray, 2)",
+            "delayQueue.run() => "
+        ],
+        "Advanced Streams":[
+            
         ]
 
     }

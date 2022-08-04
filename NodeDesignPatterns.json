@@ -37,20 +37,24 @@
                 "Ex: Controlled access to fs"
             ],
             "Composite Pattern":[
-                " composite pattern is a partitioning design pattern. ",
+                "Composite pattern is a partitioning design pattern. ",
                 "The composite pattern describes a group of objects that are treated the same way as a single instance of the same type of object.",
                 "The intent of a composite is to 'compose' objects into tree structures to represent part-whole hierarchies.",
-                "mplementing the composite pattern lets clients treat individual objects and compositions uniformly.",
-                    
+                "implementing the composite pattern lets clients treat individual objects and compositions uniformly.",
+                " programmers find that they are using multiple objects in the same way, and often have nearly identical code to handle each of them, then composite is a good choice; "
             ],
             "Decorator pattern":[
-
+                "Attach additional respponsibilty to an object dynamically",
+                "Flexible option to subclassing to extend functionality",
+                "It takes in input the base item and extends it further by adding methods or overrides the functions"
             ]
            
         },
         "Behavioural":{
             "COR: Chain of Responsibility":[
-
+                "delegates commands to a chain of processing objects.",
+                "Each object knows the next hadling object to transfer the processing to",
+                "Lets implement a restaurant handling a chan of Responsibility pattern"
             ],
             "Command Pattern":[
 

@@ -27,14 +27,18 @@ console.log(customer);
 
 //Composite Pattern
 const inv = new InventoryComposite("Inventory",0);
+const dairy = new InventoryComposite("Dairy Products",0);
 // console.log(inv);
 const milk = new Inventory("Milk 1%",20);
 const milk2 = new Inventory("Milk 2%",30);
 const milk3 = new Inventory("Milk 3%",40);
+const bread = new Inventory("WHOLE WHEAT BREAD",5);
 // console.log(milk);
-inv.addItems(milk);
-inv.addItems(milk2);
-inv.addItems(milk3);
+dairy.addItems(milk);
+dairy.addItems(milk2);
+dairy.addItems(milk3);
+inv.addItems(dairy);
+inv.addItems(bread);
 console.log(inv.getItems());
 //Let's change the name of directory and file
 // const fs = require("fs");

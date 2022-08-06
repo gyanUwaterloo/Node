@@ -125,7 +125,26 @@
             "delayQueue.run() => "
         ],
         "Advanced Streams":[
-            
+            "node --trace_gc buffer.js => has all file collected and delivered => scavenge and mark sweeps",
+            "Mark sweeps can stop the node process => it its not recommnded to direcly send large file",
+            "node --trace_gc stream.js",
+            "Use streams to tranfer large file => saves a lot of memory 1/5th and only scavenge is used for short term memory ",
+            "Readable streams/writable stream : from fs",
+            "A pipe function allows us to write data from any writable stream to any readable stream",
+            "readableStream.pipe(writableStream) and all backpressure and watermarking is handeled for us",
+            "watermarking is a way of telling about the hose size to transfer data",
+            "lesser hoze size means less memry load and more iterations to transfer data",
+            "Manually load can be paussed when the writechunk method return null and resumed when hooks for empty gets triggered",
+            "This all is handled automatically via pipes in node",
+            "Duplex stream: both readable and writable streams",
+            "Ex: passThrough from stream module=> new PassThrough() ",
+            "Duplex stream can read data from read stream and pass data to write stream",
+            "Point: Report on data, other duplex streams such as Transform Streams can be used to change data",
+            "We can create Throttle class which extends Duplex from streams => which is a duplex stream to slow down the process of piping",
+            "ex: class Throttle extends Duplex{ constructor(){} _read(){} and _write(){}}",
+            "Tranform Streams: we have -transform(chunk, encoding,callback) instead of write method, _flush(callback) ",
+            "_flush: Once readstream is stopped we can still push more chunks into trnsform stream",
+            ""
         ]
 
     }

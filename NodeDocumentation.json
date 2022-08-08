@@ -145,6 +145,25 @@
             "Tranform Streams: we have -transform(chunk, encoding,callback) instead of write method, _flush(callback) ",
             "_flush: Once readstream is stopped we can still push more chunks into trnsform stream",
             ""
+        ],
+        "Microservices":[
+            "Move functionality into different microserviices",
+            "Add a service registy between micro service and Main application or presentationlayer",
+            "This service registry will decide on where to find the infrastucture to serve the request",
+            "It also provides load balancing and resilince to the system",
+            "Also, we add a communication layer to the main application that will communicate with the middleware",
+             "This cumminication layer in fronend will serve as cache and other resilience on outages",
+             "This communication layer uses : Circuitbreaking and caching",
+             "A sevice post queue is maintained which posts request insted of sending data directly to service"
+        ],
+        "Service registry and Discovery":[
+            "1. Service Mesh: Ex. Kubernetics or containerized applications",
+            "Containers run in a software defined network: keeps tracks of all services",
+            "ex. Kubernetics has IstIO and Envoy",
+            "Service regisrty on the other hand is an aplication level component instead on network",
+            "A new service is registered in service registry and thus routing is managed",
+            "It can be provided using the network or dns services",
+            
         ]
 
     }
